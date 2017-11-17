@@ -1,5 +1,5 @@
 var signs = ["Aquarius", "Pisces","Scorpio", "Aries", "Cancer", "Taurus", "Leo", "Libra", "Virgo", "Gemini", "Capricorn", "Saggitarius"];
-//
+
 
 function onSubmit(){
     var name = document.getElementById("name").value;
