@@ -1,11 +1,11 @@
 body {
-    background-color: powderblue;
+    background-color: white;
 }
 h1 {
-    color: blue;
+    color: Black;
 }
 p {
-    color: red;
+    color: deepskyblue;
 }
 #myDiv {
     font-size: 36px;
@@ -24,13 +24,13 @@ body {
 
 /* style all the buttons in a page */
 button {
-    width: 30px;
+    width: 30%px;
     color: black;
 }
 
 /* style the element with the id “myId” */
 #myId {
-    color: yellow;
+    color: skyblue;
 }
 
 /*style all elements with the class “fontLarge” */
@@ -46,7 +46,7 @@ p.center {
 
 /* style all h1, h2 and p elements */
 h1, h2, p {
-    text-align: right;
+    text-align:  center;
     text-weight: bold;
 }
 
