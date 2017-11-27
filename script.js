@@ -1,4 +1,4 @@
-var signs = ["Aquarius", "Pisces","Scorpio", "Aries", "Cancer", "Taurus", "Leo", "Libra", "Virgo", "Gemini", "Capricorn", "Saggitarius"];
+var signs = ["Not Found ", "Aries", "Taurus","Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagitt  arius", "Capricorn", "Aquarius", "Pisces"];
 
 
 function onSubmit(){
@@ -6,13 +6,14 @@ function onSubmit(){
     var month = document.getElementById("month").value;
     var day = document.getElementById("day").value;
     var sign  = determineSign(parseInt(month), parseInt(day));
-    document.getElementById("txt").innerHTML = name + " , your sign is " + signs[sign] + " . " + txt[sign];
-    document.getElementById("image").innerHTML = "<img src= 'img/" + getImage() + ".png' width='300' height='300'>";
+    document.getElementById("txt").innerHTML = " Hi " + name + " , your sign is " + signs[sign] + " . " + txt[sign];
+    document.getElementById("image").innerHTML = "<img src= 'img/" + getImage(sign) + ".png' width='300' height='300'>";
+    document.getElementById("birthday").innerHTML = birthday(day,month,name);
 }
 
 function determineSign(month, day){
-    console.log(month)
-    console.log(day)
+    console.log(month);
+    console.log(day);
 
     if(month === 2 && day > 28){
         return 0;
@@ -56,11 +57,8 @@ function determineSign(month, day){
     if (month === 2 && day >= 19 || month === 3 && day <= 20){
        return 12;
     }
-    else {
-        return 0;
-    }
 }
-//var sign = 0;
+
 
 
 var txt = [];
@@ -79,62 +77,72 @@ var txt = [];
 
     txt[7] = " People born under the sign of Libra are peaceful, fair, and they hate being alone. Partnership is very important for them, as their mirror and someone giving them the ability to be the mirror themselves.";
 
-    txt[8] = " are always paying attention to the smallest details and their deep sense of humanity makes them one of the most careful signs of the zodiac.";
+    txt[8] = " Are always paying attention to the smallest details and their deep sense of humanity makes them one of the most careful signs of the zodiac.";
 
     txt[9] = " Curious and energetic, Sagittarius is one of the biggest travelers among all zodiac signs. Their open mind and philosophical view motivates them to wander around the world in search of the meaning of life.";
 
-    txt[10] = " Curious and energetic, Sagittarius is one of the biggest travelers among all zodiac signs. Their open mind and philosophical view motivates them to wander around the world in search of the meaning of life.";
+    txt[10] = " Capricorn is one of the three zodiac signs ruled under the earth element. ";
 
     txt[11] = " Aquarius-born are shy and quiet , but on the other hand they can be eccentric and energetic. However, in both cases, they are deep thinkers and highly intellectual people who love helping others. They are able to see without prejudice, on both sides, which makes them people who can easily solve problems.";
 
     txt[12] = " Pisces are very friendly, so they often find themselves in a company of very different people. Pisces are selfless, they are always willing to help others, without hoping to get anything back.";
 
-    txt[0] = " Error. Please Try Again :( ";
+    txt[0] = " There is an Error. Please Try Again :( ";
 
 
 
-function getImage(){
-    if(sign[0]){
+function getImage(sign){
 
-    }
-    if(sign[1]){
+    if(sign === 1){
         return "aries";
     }
-    if(sign[2]){
+    if(sign === 2){
         return "taurus";
     }
-    if(sign[3]){
+    if(sign === 3){
         return "gemini";
     }
-    if(sign[4]){
+    if(sign === 4){
         return "cancer";
     }
-    if(sign[5]){
+    if(sign === 5){
         return "leo";
     }
-    if(sign[6]){
+    if(sign === 6){
         return "virgo";
     }
-    if(sign[7]){
+    if(sign === 7){
         return "libra";
     }
-    if(sign[8]){
+    if(sign === 8){
         return "scorpio";
     }
-    if(sign[9]){
-        return "saggitarius";
+    if(sign === 9){
+        return "sagittarius";
     }
-    if(sign[10]){
+    if(sign === 10){
         return "capricorn";
     }
-    if(sign[11]){
+    if(sign === 11){
         return "aquarius";
     }
-    if(sign = 12){
-        return "piscies";
+    if(sign === 12){
+        return "pisces";
     }
 
+}
 
+function birthday(day,month){
+    console.log(day);
+    console.log(month);
+    console.log(name);
+var today = new Date();
+var d = today.getDate();
+var m = today.getMonth() + 1;
+    if(day === d && month === m){
+        return " Happy Birthday " + name + "!!";
+    }
+    return"";
 }
 
 
