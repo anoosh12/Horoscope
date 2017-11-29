@@ -23,6 +23,7 @@ function birthday(day,month){
     return "";
 }
 
+
 function determineSign(month, day){
     console.log(month);
     console.log(day);
