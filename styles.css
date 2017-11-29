@@ -12,7 +12,6 @@ p {
 }
 
 
-
 body {
     font-family: sans-serif;
     vertical-align: top;
@@ -20,7 +19,7 @@ body {
 
 
 button {
-    width: 35%px;
+    width: 40%px;
     color: black;
 }
 
@@ -31,7 +30,7 @@ button {
 
 
 .fontLarge{
-    font-size: 14px;
+    font-size: 20%px;
 }
 
 

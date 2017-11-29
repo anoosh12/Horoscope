@@ -1,14 +1,26 @@
-var signs = ["Not Found ", "Aries", "Taurus","Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagitt  arius", "Capricorn", "Aquarius", "Pisces"];
+var signs = ["Not Found ", "Aries", "Taurus","Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];
 
 
 function onSubmit(){
     var name = document.getElementById("name").value;
-    var month = document.getElementById("month").value;
-    var day = document.getElementById("day").value;
-    var sign  = determineSign(parseInt(month), parseInt(day));
-    document.getElementById("txt").innerHTML = " Hi " + name + " , your sign is " + signs[sign] + " . " + txt[sign];
+    var month = parseInt(document.getElementById("month").value);
+    var day = parseInt(document.getElementById("day").value);
+    var sign  = determineSign(month, day);
+    document.getElementById("txt").innerHTML = " Hello " + name + " , your sign is " + signs[sign] + " . " + txt[sign];
     document.getElementById("image").innerHTML = "<img src= 'img/" + getImage(sign) + ".png' width='300' height='300'>";
     document.getElementById("birthday").innerHTML = birthday(day,month,name);
+}
+
+function birthday(day,month){
+    console.log(day);
+    console.log(month);
+    var today = new Date();
+    var d = today.getDate();
+    var m = today.getMonth() + 1;
+    if(day === d && month === m){
+        return " Happy Birthday " + name + "!!";
+    }
+    return "";
 }
 
 function determineSign(month, day){
@@ -132,18 +144,6 @@ function getImage(sign){
 
 }
 
-function birthday(day,month){
-    console.log(day);
-    console.log(month);
-    console.log(name);
-var today = new Date();
-var d = today.getDate();
-var m = today.getMonth() + 1;
-    if(day === d && month === m){
-        return " Happy Birthday " + name + "!!";
-    }
-    return"";
-}
 
 
 
